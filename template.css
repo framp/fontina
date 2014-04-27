@@ -1,0 +1,8 @@
+@font-face {
+  font-family: '{name}';
+  src: url('{name}.eot');
+  src: url('{name}.eot?#iefix') format('embedded-opentype'),
+       url('{name}.woff') format('woff'),
+       url('{name}.ttf') format('truetype'),
+       url('{name}.svg#{name}') format('svg');
+}

@@ -1,0 +1,13 @@
+{
+  "name": "fontina",
+  "author": "Federico Rampazzo <frampone@gmail.com> (http://framp.me)",
+  "version": "0.0.5",
+  "description": "Make your fonts ready for @font-face",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/framp/fontina.git"
+  },
+  "dependencies": {
+    "async": "^0.7.0"
+  }
+}
