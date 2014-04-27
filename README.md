@@ -1,12 +1,14 @@
-#fontina
+#Fontina
 
-Fontina make your fonts ready for @font-face.
+Fontina make your fonts ready for @font-face!
+
+Fontina generates .ttf, .otf, .svg, .woff, .eot fonts from a font supported by fontforge.
 
 A stylesheet will be created as well.
 
 ##Requirements
 
-You should install:
+Before using fontina you need to install:
 
  - Fontforge:   http://fontforge.sourceforge.net/
  - ttf2eot:     http://code.google.com/p/ttf2eot/)
@@ -32,7 +34,7 @@ The options object can be configured as follow:
  
 Install [grunt-fontina](http://github.com/framp/grunt-fontina) to automate your workflow.
 
-    npm install grunt-fontina
+    npm install --save grunt-fontina
     
 Load a new task in your `Gruntfile.js`:
 
@@ -42,8 +44,8 @@ Add a configuration block for fontina:
 
     fontina: {
           fonts: {
-            src: './fonts',           //Directory containing your fonts
-            dest: './public/fonts',   //Directory which will contain your @font-face ready fonts
+            src: './fonts',           //Source directory
+            dest: './public/fonts',   //Output directory
             options: {                //Fontina options object
               output: true
             }
