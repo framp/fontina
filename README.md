@@ -29,7 +29,7 @@ The options object can be configured as follow:
       callback: null  // it will be called after the conversion is done
     }
     
-Check out grunt-fontina()
+Check out grunt-fontina(http://github.com/framp/fontina)
     
 ##Why
 
