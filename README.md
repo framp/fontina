@@ -12,7 +12,7 @@ You should install:
  - ttf2eot:     http://code.google.com/p/ttf2eot/)
  - sfnt2woff:   http://people.mozilla.com/~jkew/woff/
 
-##Usage
+##Basic usage
     var fontina = require('fontina');
     var options = {};
     fontina('./fonts/font.ttf', './public/fonts', options);
@@ -27,8 +27,28 @@ The options object can be configured as follow:
       error: false,   // if true the errors from the tool will be printed
       cwd: null       // current directory from which the tool are run
     }
+
+##Integration with Grunt    
+ 
+Install [grunt-fontina](http://github.com/framp/grunt-fontina) to automate your workflow.
+
+    npm install grunt-fontina
     
-Check out grunt-fontina()
+Load a new task in your `Gruntfile.js`:
+
+    grunt.loadNpmTasks('grunt-fontina');
+
+Add a configuration block for fontina:
+
+    fontina: {
+          fonts: {
+            src: './fonts',           //Directory containing your fonts
+            dest: './public/fonts',   //Directory which will contain your @font-face ready fonts
+            options: {                //Fontina options object
+              output: true
+            }
+          }
+        }
     
 ##Why
 
