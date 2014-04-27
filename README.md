@@ -22,9 +22,10 @@ Fontina will do the rest.
 The options object can be configured as follow:
 
     {
+      force: false,   // if true the file extension won't be checked
       output: false,  // if true the output from the tool will be printed
       error: false,   // if true the errors from the tool will be printed
-      cwd: null       // current directory from which the tool are run
+      cwd: null,      // current directory from which the tool are run
       callback: null  // it will be called after the conversion is done
     }
     
