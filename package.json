@@ -1,8 +1,9 @@
 {
   "name": "fontina",
   "author": "Federico Rampazzo <frampone@gmail.com> (http://framp.me)",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Make your fonts ready for @font-face",
+  "keywords": ["font", "css", "ttf", "otf", "svg", "woff", "eot", "generator", "webfont", "truetype", "typography"],
   "repository": {
     "type": "git",
     "url": "http://github.com/framp/fontina.git"
