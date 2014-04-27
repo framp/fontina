@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Fontina by framp</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Fontina</h1>
+        <p>Make your fonts ready for @font-face!</p>
+        <p class="view"><a href="https://github.com/framp/fontina">View the Project on GitHub <small>framp/fontina</small></a></p>
+        <ul>
+          <li><a href="https://github.com/framp/fontina/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/framp/fontina/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/framp/fontina">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Fontina make your fonts ready for @font-face!</p>
+
+<p>Fontina generates .ttf, .otf, .svg, .woff, .eot fonts from a font supported by fontforge.</p>
+
+<p>A stylesheet will be created as well.</p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>Before using fontina you need to install:</p>
+
+<ul>
+<li>Fontforge:   <a href="http://fontforge.sourceforge.net/">http://fontforge.sourceforge.net/</a>
+</li>
+<li>ttf2eot:     <a href="http://code.google.com/p/ttf2eot/">http://code.google.com/p/ttf2eot/</a>)</li>
+<li>sfnt2woff:   <a href="http://people.mozilla.com/%7Ejkew/woff/">http://people.mozilla.com/~jkew/woff/</a>
+</li>
+</ul><h2>
+<a name="basic-usage" class="anchor" href="#basic-usage"><span class="octicon octicon-link"></span></a>Basic usage</h2>
+
+<pre><code>var fontina = require('fontina');
+var options = {};
+fontina('./fonts/font.ttf', './public/fonts', options);
+</code></pre>
+
+<p>Fontina will do the rest.</p>
+
+<p>The options object can be configured as follow:</p>
+
+<pre><code>{
+  force: false,   // if true the file extension won't be checked
+  output: false,  // if true the output from the tool will be printed
+  error: false,   // if true the errors from the tool will be printed
+  cwd: null       // current directory from which the tool are run
+}
+</code></pre>
+
+<h2>
+<a name="integration-with-grunt" class="anchor" href="#integration-with-grunt"><span class="octicon octicon-link"></span></a>Integration with Grunt</h2>
+
+<p>Install <a href="http://github.com/framp/grunt-fontina">grunt-fontina</a> to automate your workflow.</p>
+
+<pre><code>npm install --save grunt-fontina
+</code></pre>
+
+<p>Load a new task in your <code>Gruntfile.js</code>:</p>
+
+<pre><code>grunt.loadNpmTasks('grunt-fontina');
+</code></pre>
+
+<p>Add a configuration block for fontina:</p>
+
+<pre><code>fontina: {
+      fonts: {
+        src: './fonts',           //Source directory
+        dest: './public/fonts',   //Output directory
+        options: {                //Fontina options object
+          output: true
+        }
+      }
+    }
+</code></pre>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/framp">framp</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
