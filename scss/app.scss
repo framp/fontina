@@ -1,0 +1,153 @@
+@import "settings";
+//@import "foundation";
+
+// Or selectively include components
+@import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switch",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+   "foundation/components/type";
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
+
+/*
+$background: #F3F0C8;
+$text-color: #161616;
+$hover-link-color: #007ba0;
+*/
+$background: #003B4D;
+$text-color: #E8DFB8;
+$hover-link-color: #F9CF1E;
+
+$background-code: #222;
+$text-color-code: #fff;
+
+body{
+  font-family: 'Lato', 'sans-serif';
+  background: $background;
+  color: $text-color;
+  font-size:100%;
+}
+h1,h3{
+  font-family: 'Old Standard TT', 'serif';
+  color: $text-color;
+  text-align:center;
+  text-transform: uppercase;
+}
+h3{
+  font-size:120%;
+  border-top: 1px solid $text-color;
+  margin: 100px 0 50px 0;
+  a{
+    position: relative; 
+    top: -0.8em;
+    padding: 5px 30px 5px 30px; 
+    background: $background;
+    color: $text-color;
+    outline:0;
+  }
+  a:hover{
+    color: lighten($text-color, 30%);
+  }
+}
+
+hr{
+  border-color: $background; 
+  margin:20px 0 50px 0;
+}
+
+header{
+  text-align: center;
+  img{
+    width:150px;
+  }
+}
+
+pre{
+  white-space: pre-wrap;                 /* CSS3 browsers  */
+  white-space: -moz-pre-wrap !important; /* 1999+ Mozilla  */
+  white-space: -pre-wrap;                /* Opera 4 thru 6 */
+  white-space: -o-pre-wrap;              /* Opera 7 and up */
+  word-wrap: break-word;                 /* IE 5.5+ and up */
+}
+
+a{
+  color: $hover-link-color
+}
+a:hover{
+  color: lighten($hover-link-color, 20%);
+}
+
+p.intro{
+  text-align: center; 
+}
+strong{
+  font-weight:900;
+}
+
+.panel{
+  border: none;
+  background: $background-code;
+  code{
+    padding:0;
+  }
+}
+.row {
+  padding:10px;
+}
+code{
+  background: $background-code;
+  color: $text-color-code;
+  padding:5px;
+}
+
+footer{
+  text-align: center;
+  
+  form{
+    display:inline;
+    button{
+      margin-left: -4px;
+      font-size:95%;
+      background: none;
+      border: 0;
+      color: $hover-link-color;
+      display: inline;
+      outline: 0;
+      cursor: pointer; 
+      cursor: hand; 
+    }
+    button:hover{
+      color: lighten($hover-link-color, 20%);
+    }
+  }
+}
