@@ -15,6 +15,13 @@ Before using fontina you need to install:
  - sfnt2woff:   http://people.mozilla.com/~jkew/woff/
 
 ##Basic usage
+
+Install it:
+
+    npm install --save grunt-fontina
+    
+Write this:
+    
     var fontina = require('fontina');
     var options = {};
     fontina('./fonts/font.ttf', './public/fonts', options);
