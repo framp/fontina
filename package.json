@@ -8,6 +8,7 @@
     "type": "git",
     "url": "http://github.com/framp/fontina.git"
   },
+  "homepage": "http://framp.me/fontina",
   "dependencies": {
     "async": "^0.7.0"
   }
