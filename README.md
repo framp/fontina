@@ -12,7 +12,6 @@ Before using fontina you need to install:
 
  - Fontforge:   http://fontforge.sourceforge.net/
  - ttf2eot:     http://code.google.com/p/ttf2eot/)
- - sfnt2woff:   http://people.mozilla.com/~jkew/woff/
 
 ##Basic usage
 

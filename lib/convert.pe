@@ -2,3 +2,5 @@ Open($1)
 Generate($2 + "/" + $1:t:r + ".otf")
 Generate($2 + "/" + $1:t:r + ".ttf")
 Generate($2 + "/" + $1:t:r + ".svg")
+Generate($2 + "/" + $1:t:r + ".woff")
+
