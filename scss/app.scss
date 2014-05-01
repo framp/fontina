@@ -170,6 +170,8 @@ footer{
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      padding-left: 2px;
+      padding-right: 2px;
     }
     a:hover{
       color: $text-color-tab;
