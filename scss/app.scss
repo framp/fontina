@@ -1,11 +1,11 @@
 @import "settings";
-//@import "foundation";
+@import "foundation";
 
 // Or selectively include components
 @import
 //   "foundation/components/accordion",
 //   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
+   "foundation/components/block-grid",
 //   "foundation/components/breadcrumbs",
 //   "foundation/components/button-groups",
 //   "foundation/components/buttons",
@@ -25,13 +25,13 @@
    "foundation/components/panels",
 //   "foundation/components/pricing-tables",
 //   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
+   "foundation/components/reveal",
 //   "foundation/components/side-nav",
 //   "foundation/components/split-buttons",
 //   "foundation/components/sub-nav",
 //   "foundation/components/switch",
 //   "foundation/components/tables",
-//   "foundation/components/tabs",
+   "foundation/components/tabs",
 //   "foundation/components/thumbs",
 //   "foundation/components/tooltips",
 //   "foundation/components/top-bar",
@@ -54,6 +54,9 @@ $text-color-code: #fff;
 $background-ribbon: #F9CF1E;
 $text-color-ribbon: #003B4D;
 
+$background-tab: darken(#003B4D, 5%);
+$text-color-tab: #E8DFB8;
+
 
 body{
   font-family: 'Lato', 'sans-serif';
@@ -70,8 +73,8 @@ h1,h3{
 h3{
   font-size:120%;
   border-top: 1px solid $text-color;
-  margin: 100px 0 50px 0;
-  a{
+  margin: 40px 0 40px 0;
+  a,a:visited{
     position: relative; 
     top: -0.8em;
     padding: 5px 30px 5px 30px; 
@@ -104,7 +107,7 @@ pre{
   word-wrap: break-word;                 /* IE 5.5+ and up */
 }
 
-a{
+a,a:visited{
   color: $hover-link-color
 }
 a:hover{
@@ -113,6 +116,7 @@ a:hover{
 
 p.intro{
   text-align: center; 
+  margin-bottom: 100px;
 }
 strong{
   font-weight:900;
@@ -154,6 +158,31 @@ footer{
       color: lighten($hover-link-color, 20%);
     }
   }
+}
+
+.howto-tabs{
+  dd{
+    text-align: center;
+    width: 33.3%;
+    a{
+      color: $text-color-tab;
+      background: $background-tab;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    a:hover{
+      color: $text-color-tab;
+      background: lighten($background-tab, 1%);
+    }
+  }
+  dd.active{
+    a{
+      color: $text-color-tab;
+      background: lighten($background-tab, 2%);
+    }
+  }
+  
 }
 
 .github-fork-ribbon {

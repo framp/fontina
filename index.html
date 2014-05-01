@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,45 +32,69 @@
       A <strong>@font-face ready</strong> stylesheet will be created as well, making you ready to <strong>face</strong> the web with your best fonts.</p>
 
       <h3><a name="requirements" class="anchor" href="#requirements">Requirements</a></h3>
-
-      <p>Before using Fontina you need to install:</p>
-
-      <ul>
-        <li><a href="http://fontforge.sourceforge.net/">Fontforge</a></li>
-        <li><a href="http://code.google.com/p/ttf2eot/">ttf2eot</a></li>
-      </ul>
-      
+      <div class="row">
+        <div class="medium-6 small-12 columns">
+          <p>Before using Fontina you need to install:</p>
+          <ul>
+            <li><a href="http://fontforge.sourceforge.net/">Fontforge</a></li>
+            <li><a href="http://code.google.com/p/ttf2eot/">ttf2eot</a></li>
+          </ul>
+        </div>
+        <div class="medium-6 small-12 columns">
+          <dl class="howto-tabs tabs" data-tab>
+            <dd class="active"><a href="#mac">OS X</a></dd>
+            <dd><a href="#arch-linux">Arch Linux</a></dd>
+            <dd><a href="#windows">Windows</a></dd>
+          </dl>
+          <div class="tabs-content">
+            <div class="content active" id="mac">
+              <pre class="panel"><code>brew install fontforge ttf2eot</code></pre>
+            </div>
+            <div class="content" id="arch-linux">
+              <pre class="panel"><code>yaourt -S fontforge ttf2eot</code></pre>
+            </div>
+            <div class="content" id="windows">
+              <pre class="panel"><code># Install fontforge and ttf2eot manually
+# Add the executables to PATH</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
       <h3><a name="basic-usage" class="anchor" href="#basic-usage">Basic usage</a></h3>
+      <div class="row">
       
-      <pre class="panel"><code>npm install --save fontina</code></pre>
+        <pre class="panel"><code>npm install --save fontina</code></pre>
 
-      <pre class="panel"><code>var fontina = require('fontina');
+        <pre class="panel"><code>var fontina = require('fontina');
 var options = {};
 fontina('./fonts/font.ttf', './public/fonts', options);</code></pre>
 
-      <p>Fontina will do the rest.</p>
-      <p>The options object can be configured as follow:</p>
+        <p>Fontina will do the rest.</p>
+        <p>The options object can be configured as follow:</p>
 
-      <pre class="panel"><code>{
+        <pre class="panel"><code>{
   force: false,   // if true the file extension won't be checked
   output: false,  // if true the output from the tool will be printed
   error: false,   // if true the errors from the tool will be printed
   cwd: null       // current directory from which the tools are run
 }</code></pre>
-
+      
+      </div>
+      
       <h3><a name="integration-with-grunt" class="anchor" href="#integration-with-grunt">Integration with Grunt</a></h3>
+      
+      <div class="row">
+        <p>Install <a href="http://github.com/framp/grunt-fontina">grunt-fontina</a> to automate your workflow.</p>
 
-      <p>Install <a href="http://github.com/framp/grunt-fontina">grunt-fontina</a> to automate your workflow.</p>
+        <pre class="panel"><code>npm install --save grunt-fontina</code></pre>
 
-      <pre class="panel"><code>npm install --save grunt-fontina</code></pre>
+        <p>Load a new task in your <code>Gruntfile.js</code>:</p>
 
-      <p>Load a new task in your <code>Gruntfile.js</code>:</p>
+        <pre class="panel"><code>grunt.loadNpmTasks('grunt-fontina');</code></pre>
 
-      <pre class="panel"><code>grunt.loadNpmTasks('grunt-fontina');</code></pre>
+        <p>Add a configuration block for Fontina:</p>
 
-      <p>Add a configuration block for Fontina:</p>
-
-      <pre class="panel"><code>fontina: {
+        <pre class="panel"><code>fontina: {
   fonts: {
     src: './fonts',           // Source directory
     dest: './public/fonts',   // Output directory
@@ -79,6 +103,7 @@ fontina('./fonts/font.ttf', './public/fonts', options);</code></pre>
     }
   }
 }</code></pre>
+      </div>
     </section>
 
     <hr>
@@ -97,5 +122,11 @@ fontina('./fonts/font.ttf', './public/fonts', options);</code></pre>
       </p>
 
     </footer>
+    
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
