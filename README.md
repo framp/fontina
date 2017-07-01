@@ -1,4 +1,4 @@
-#Fontina
+# Fontina
 
 Fontina make your fonts ready for @font-face!
 
@@ -6,14 +6,14 @@ Fontina generates .ttf, .otf, .svg, .woff, .eot fonts from a font supported by f
 
 A stylesheet will be created as well.
 
-##Requirements
+## Requirements
 
 Before using fontina you need to install:
 
  - Fontforge:   http://fontforge.sourceforge.net/
  - ttf2eot:     http://code.google.com/p/ttf2eot/)
 
-##Basic usage
+## Basic usage
 
 Install it:
 
@@ -36,7 +36,7 @@ The options object can be configured as follow:
       cwd: null       // current directory from which the tools are run
     }
 
-##Integration with Grunt    
+## Integration with Grunt    
  
 Install [grunt-fontina](http://github.com/framp/grunt-fontina) to automate your workflow.
 
@@ -58,11 +58,11 @@ Add a configuration block for fontina:
           }
         }
     
-##Why
+## Why
 
 I've always hated using an external service just to get my font ready.
 
 It breaks your workflow and you have to do it every time you add a font.
 
-##License
+## License
 MIT
